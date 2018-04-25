@@ -15,6 +15,10 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
+//things add for button change import
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * Main screen for our API testing app.
@@ -50,6 +54,15 @@ public final class MainActivity extends AppCompatActivity {
                 startAPICall();
             }
         });
+        //the things added for button change
+        public void buttonOnclick(View v) {
+            Button button = (Button) v;
+            ((Button) v).setText("complete");
+        }
+        public void buttonOnclick1(View v) {
+            Button button = (Button) v;
+            ((Button) v).setText("Lucky");
+        }
 
         final Button fortuneButton = findViewById(R.id.fortune);
         fortuneButton.setOnClickListener(new View.OnClickListener() {
